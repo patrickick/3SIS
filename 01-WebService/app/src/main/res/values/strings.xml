@@ -2,4 +2,5 @@
     <string name="app_name">01-WebService</string>
     <string name="edit_codigo">Código do Item</string>
     <string name="btn_buscar">Buscar</string>
+    <string name="menu_cadastro">Cadastro</string>
 </resources>

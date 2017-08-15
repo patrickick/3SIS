@@ -1,9 +1,12 @@
 package br.com.fiap.webservice;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,6 +25,23 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView resposta;
     private EditText editCodigo;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //Valida o item de menu escolhido
+        if (item.getItemId() == R.id.menu_cadastrar){
+            //Navegar de tela
+            Intent intent = new Intent(this,CadastroActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
