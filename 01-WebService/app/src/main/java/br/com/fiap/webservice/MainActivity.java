@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
             //Navegar de tela
             Intent intent = new Intent(this,CadastroActivity.class);
             startActivity(intent);
+        }else if (item.getItemId() == R.id.menu_listar){
+            //Navega para a tela de listagem
+            Intent intent = new Intent(this,ListaActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
