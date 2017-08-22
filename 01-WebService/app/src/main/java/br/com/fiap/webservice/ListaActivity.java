@@ -1,5 +1,6 @@
 package br.com.fiap.webservice;
 
+import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -46,8 +47,17 @@ public class ListaActivity extends AppCompatActivity {
 
     private class ListaTask extends AsyncTask<Void, Void, String> {
 
+        private ProgressDialog progressDialog;
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(
+                    ListaActivity.this,"Aguarde","Buscando dados no servidor");
+        }
+
         @Override
         protected void onPostExecute(String s) {
+            progressDialog.dismiss(); //fecha o dialog
             if (s != null){
                 //Ler o JSON Array
                 try {
