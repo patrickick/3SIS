@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">04-SQLite</string>
+    <string name="cadastro_de_produto">Cadastro de Produto</string>
+    <string name="nome">Nome</string>
+    <string name="valor">Valor</string>
+    <string name="descricao">Descrição</string>
+    <string name="cadastrar">Cadastrar</string>
+</resources>
